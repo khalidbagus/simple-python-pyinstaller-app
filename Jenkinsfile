@@ -1,6 +1,6 @@
 node {
     // Mendifinisikan agen Docker
-    docker.image('python:2-alpine').inside {
+    docker.image('python:2-alpine').inside('-u root') {
         checkout scm
 
         // Konversi Build Stage
